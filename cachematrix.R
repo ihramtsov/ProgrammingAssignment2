@@ -1,3 +1,6 @@
+##calculate inverse matrix with cache
+
+
 ##function-constructor for matrix cache
 makeCacheMatrix <- function(x = matrix()) {
     inverseMatrix <- NULL
@@ -30,7 +33,7 @@ cacheSolve <- function(x, ...) {
 }
 
 ##calculate inverse matrix with validation: only square non-singular two-dimentional matrix is acceptable
-##terminate an execution if validation failed
+##terminate an execution if the validation failed.
 calcInverseMatrix <- function(m, ...){
     if (!is.matrix(m) || (dim(m) != 2) || (nrow(m) != ncol(m)))
         stop("provide square two-dimentional matrix, please")
